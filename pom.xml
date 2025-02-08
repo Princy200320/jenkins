@@ -60,3 +60,54 @@
    </plugins>
  </build>
 </project>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0&quot;
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance&quot;
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd"&gt;
+  <!-- Local repository location (optional) -->
+  <localRepository>${user.home}/.m2/repository</localRepository>
+
+  <!-- Mirrors for repositories -->
+  <mirrors>
+    <mirror>
+      <id>central</id>
+      <url>https://repo1.maven.org/maven2</url&gt;
+      <mirrorOf>central</mirrorOf>
+    </mirror>
+  </mirrors>
+
+  <!-- Profiles (optional) -->
+  <profiles>
+    <profile>
+      <id>default</id>
+      <repositories>
+        <repository>
+          <id>central</id>
+          <url>https://repo1.maven.org/maven2</url&gt;
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>central</id>
+          <url>https://repo1.maven.org/maven2</url&gt;
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
+  </profiles>
+
+  <!-- Active profiles (optional) -->
+  <activeProfiles>
+    <activeProfile>default</activeProfile>
+  </activeProfiles>
+</settings>
