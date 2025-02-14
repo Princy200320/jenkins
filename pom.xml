@@ -1,113 +1,68 @@
-<?xml version="1.0" encoding="UTF-8"?>
+
+   	
+
+ 
+ <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
- <modelVersion>4.0.0</modelVersion>
- <groupId>princy</groupId>
- <artifactId>practical1</artifactId>
- <version>0.0.1-SNAPSHOT</version>
- <packaging>jar</packaging>
- <name>practical1</name>
- <url>http://www.example.com</url>
- <properties>
-   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-   <maven.compiler.source>1.8</maven.compiler.source>
-   <maven.compiler.target>1.8</maven.compiler.target>
- </properties>
- <dependencies>
-   <dependency>
-     <groupId>org.junit.jupiter</groupId>
-     <artifactId>junit-jupiter-engine</artifactId>
-     <version>5.7.1</version>
-     <scope>test</scope>
-   </dependency>
-   <dependency>
-     <groupId>org.junit.jupiter</groupId>
-     <artifactId>junit-jupiter-params</artifactId>
-     <version>5.7.1</version>
-     <scope>test</scope> 
-   </dependency>
-   <dependency>
-   	<groupId>org.springframework</groupId>
-   	<artifactId>spring-core</artifactId>
-   	<version>5.3.9</version>
-   </dependency>
-  
-   <dependency>
-   	<groupId>org.springframework</groupId>
-   	<artifactId>spring-context</artifactId>
-   	<version>5.3.9</version>
-   </dependency>
-  
-   <dependency>
-   	<groupId>org.springframework</groupId>
-   	<artifactId>spring-jdbc</artifactId>
-   	<version>5.3.9</version>
-   </dependency>
-  
-   <dependency>
-       <groupId>mysql</groupId>
-       <artifactId>mysql-connector-java</artifactId>
-       <version>8.0.32</version> <!-- or the latest version -->
-   </dependency>
- </dependencies>
- <build>
-   <plugins>
-     <plugin>
-       <groupId>org.apache.maven.plugins</groupId>
-       <artifactId>maven-surefire-plugin</artifactId>
-       <version>3.0.0-M5</version>
-     </plugin>
-   </plugins>
- </build>
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>princy</groupId>
+  <artifactId>practical1</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+  <name>practical1</name>
+  <url>http://www.example.com</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>5.7.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-params</artifactId>
+      <version>5.7.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-core</artifactId>
+      <version>5.3.9</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>5.3.9</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-jdbc</artifactId>
+      <version>5.3.9</version>
+    </dependency>
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.32</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M5</version>
+      </plugin>
+    </plugins>
+  </build>
+
 </project>
-<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0&quot;
-          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance&quot;
-          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd"&gt;
-  <!-- Local repository location (optional) -->
-  <localRepository>${user.home}/.m2/repository</localRepository>
-
-  <!-- Mirrors for repositories -->
-  <mirrors>
-    <mirror>
-      <id>central</id>
-      <url>https://repo1.maven.org/maven2</url&gt;
-      <mirrorOf>central</mirrorOf>
-    </mirror>
-  </mirrors>
-
-  <!-- Profiles (optional) -->
-  <profiles>
-    <profile>
-      <id>default</id>
-      <repositories>
-        <repository>
-          <id>central</id>
-          <url>https://repo1.maven.org/maven2</url&gt;
-          <releases>
-            <enabled>true</enabled>
-          </releases>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
-        </repository>
-      </repositories>
-      <pluginRepositories>
-        <pluginRepository>
-          <id>central</id>
-          <url>https://repo1.maven.org/maven2</url&gt;
-          <releases>
-            <enabled>true</enabled>
-          </releases>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
-        </pluginRepository>
-      </pluginRepositories>
-    </profile>
-  </profiles>
-
-  <!-- Active profiles (optional) -->
-  <activeProfiles>
-    <activeProfile>default</activeProfile>
-  </activeProfiles>
-</settings>
